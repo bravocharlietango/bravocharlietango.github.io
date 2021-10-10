@@ -29,14 +29,15 @@ body {
   font-size: 24pt;
 }
 
+.textbox{
+	background: rgba(0, 0, 0, 0.5);
+}
 .calltoaction{
-  background: rgba(0, 0, 0, 0.56);
   margin:auto;
   padding: 20px;
   font-size: 18pt;
   color: white;
   text-align:center;  
-  display:table-cell;
   vertical-align: middle;
 }
 .box {
@@ -95,13 +96,13 @@ img {
   <p>Welcome to J Jamison Tompkins Exotics</p>
 </div>
 
-<div class="box">
+<div class="">
 <div class="calltoaction">
 <br>
-<p>Hand turned wooden pens, from exotic woods found around the world.</p> 
+<div class="textbox">
+<p>Hand turned wooden pens, from exotic woods found around the world.</p>
+</div>
 <br>
-<img src="pen.png">
-<br><br>
 <a
   class="btn btn-primary"
   href="#catalog"
@@ -116,12 +117,13 @@ img {
 </a>
 
 <br><br>
+<div class="textbox">
 <!-- START PAYPAL FORM -->
-<div class="collapse" id="payment">	
+<div class="collapse" id="payment">
 <p>Quick Payment Form</p>
 <p style="font-size: 14pt;">* Contact us prior to using this payment form if you are placing a new order.</p>
 <div class="pp-canvasarea">
-<div class="pp-formbox">
+<div class="pp-form">
 <form name="payment_form" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pp-form">
 <input type="hidden" name="cmd" value="_xclick">
 <input type="hidden" name="business" value="k6ruv@mac.com">
@@ -130,7 +132,7 @@ img {
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="currency_code" value="USD">
 Payment amount:<br>
-<input type="text" name="amount" value="40.00" class="pp-input" maxlength="6" size="6"><br>
+<input type="text" name="amount" value="" class="pp-input" maxlength="6" size="6"><br>
 <input type="hidden" name="on0" value="Payment Details">
 Payment notes:<br>
 <textarea name="os0" rows="4" class="pp-textarea" maxlength="200"></textarea><br>
@@ -145,6 +147,7 @@ Payment notes:<br>
 </div>
 </div>
 <!-- END PAYPAL FORM -->
+</div>
 
 </div>
 </div>
