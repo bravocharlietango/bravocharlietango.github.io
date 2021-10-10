@@ -46,6 +46,7 @@ body {
   display: table;
 }
 footer {
+	font-size:18pt;
   text-align: center;
   padding: 3px;
   background-color: black;
@@ -64,7 +65,7 @@ img {
 
 /* PAYPAL PAYMENT FORM CODE */
 .pp-form	{ margin: auto; }
-.pp-input	{ margin: auto; }
+.pp-input	{ margin: auto;}
 .pp-textarea	{ margin: auto; resize: none;}
 .pp-button 	{ margin: auto; }
 .pp-badge	{
@@ -108,25 +109,32 @@ img {
 >
   Download PDF Catalog
 </a>
+
+<a class="btn btn-primary" data-bs-toggle="collapse" href="#payment" role="button" aria-expanded="false" aria-controls="payment">
+    Show Payment Form
+</a>
+
 <br><br><br>
+
+
+<!-- START PAYPAL FORM -->
+<div class="collapse" id="payment">	
 <p>Online Payment Form</p>
 <p style="font-size: 14pt;">* Contact us prior to using this payment form if you are placing a new order.</p>
-<!-- START PAYPAL FORM -->
-<div class="" id="payment">	
 <div class="pp-canvasarea">
 <div class="pp-formbox">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pp-form">
+<form name="payment_form" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="pp-form">
 <input type="hidden" name="cmd" value="_xclick">
 <input type="hidden" name="business" value="k6ruv@mac.com">
 <input type="hidden" name="item_name" value="Paypal Payment">
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="currency_code" value="USD">
-Enter amount:<br>
-<input type="text" name="amount" value="40.00" class="pp-input"><br>
+Payment amount:<br>
+<input type="text" name="amount" value="40.00" class="pp-input" maxlength="5" size="5"><br>
 <input type="hidden" name="on0" value="Payment Details">
 Payment notes:<br>
-<textarea name="os0" rows="4" class="pp-textarea"></textarea><br>
-<input type="submit" name="PaypalPayment" value="Send Payment" class="pp-button btn btn-primary button"><br>
+<textarea name="os0" rows="4" class="pp-textarea" maxlength="200"></textarea><br>
+<input type="submit" name="PaypalPayment" value="Send Payment" class="pp-button btn btn-primary button" onclick="paymentValidation()"><br>
 </form>
 </div>
 <br>
