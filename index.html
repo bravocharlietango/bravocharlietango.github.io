@@ -68,7 +68,7 @@ img {
 .pp-textarea	{ margin: auto; resize: none;}
 .pp-button 	{ margin: auto; }
 .pp-badge	{
-	float:right;
+	float:center;
 		margin: auto;
 		}
 .pp-canvasarea	{
@@ -77,7 +77,7 @@ img {
 		padding: 6px;
 		}
 .pp-formbox	{
-	float:left;
+	float:center;
 		margin:auto;
 		font: normal 13pt arial, sans-serif;
 		padding: 0px 10px 0px 0px;
@@ -110,7 +110,7 @@ img {
 </a>
 <br><br><br>
 <p>Online Payment Form</p>
-<p style="font-size: 14pt;">* Contact me prior to using this payment form if you are placing a new order.</p>
+<p style="font-size: 14pt;">* Contact us prior to using this payment form if you are placing a new order.</p>
 <!-- START PAYPAL FORM -->
 <div class="" id="payment">	
 <div class="pp-canvasarea">
@@ -122,14 +122,17 @@ img {
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="currency_code" value="USD">
 Enter amount:<br>
-<input type="text" name="amount" value="" class="pp-input"><br>
+<input type="text" name="amount" value="40.00" class="pp-input"><br>
 <input type="hidden" name="on0" value="Payment Details">
 Payment notes:<br>
 <textarea name="os0" rows="4" class="pp-textarea"></textarea><br>
 <input type="submit" name="PaypalPayment" value="Send Payment" class="pp-button btn btn-primary button"><br>
 </form>
 </div>
+<br>
+<div>
 <img src="paypal-badge.png" class="pp-badge" alt="Payments through Paypal">
+</div>
 <div class="pp-clear-float"></div>
 </div>
 <br>
